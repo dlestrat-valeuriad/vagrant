@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Manage colors
+. config/colors.sh
+
+printf "\n${RED} ------------- Stopping env.... ------------- ${NC}\n\n"
+vagrant halt
+
+printf "\n${RED} ------------- Killing ssh process.... ------------- ${NC}\n\n"
+kill -9 $(ps aux | grep -e ssh-agent | awk '{ print $1 }')

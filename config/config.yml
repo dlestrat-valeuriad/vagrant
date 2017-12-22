@@ -1,0 +1,11 @@
+root:
+
+  # Vagrant provisioning conf
+  box_name: "bento/centos-7.2"
+  vm_name: "vagrant-01"
+  vm_ram: 1024
+  vm_ip_address: "192.168.17.12"
+  vm_ip_mask: "192.168.17.*"
+
+  # Proxy conf
+  #proxy: "http://myproxy:8080"

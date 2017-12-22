@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Manage colors
+. config/colors.sh
+
+# Configure ssh
+printf "\n${BLUE} ------------- Manage ssh ------------- ${NC}\n\n"
+eval `ssh-agent -s`
+ssh-add ~/.ssh/id_rsa
+
+printf "\n${BLUE} ------------- Boot VM ------------- ${NC}\n\n"
+vagrant up
